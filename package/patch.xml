@@ -1,0 +1,14 @@
+<CPackWiXPatch>
+	<CPackWiXFragment Id="#PRODUCT">
+        <CustomAction Id="RunTool"
+                      FileKey="CM_FP_utilities.test_tool.exe"
+                      ExeCommand="./"
+                      Execute="deferred" Impersonate="no" Return="ignore"/>
+        <InstallExecuteSequence>
+            <Custom Action="RunTool"
+                    Before="InstallFinalize">
+                    Not Installed
+            </Custom>
+        </InstallExecuteSequence>
+    </CPackWiXFragment>
+</CPackWiXPatch>
